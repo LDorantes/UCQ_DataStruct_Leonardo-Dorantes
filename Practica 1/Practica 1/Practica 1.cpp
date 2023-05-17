@@ -3,10 +3,49 @@
 
 #include <iostream>
 
+
 int main()
 {
-    std::cout << "Hello World!\n";
-    return 0;
+	//Declaración
+	int mydeclaration;
+
+	
+	//Inicialización
+	mydeclaration = 5;
+	int myInt = 5;
+	int j=6;
+	
+	//c de console y out de salida= salida a consola
+	std::cout << myInt << '\n';
+	std::cout << j << '\n';
+	// c de consola + in de entrada: Entrada a consola (cin)
+	int myArray[5] = { 0,1,2,3,4 };
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << myArray[i] << '\n';
+	}
+	
+	std::cout << &myInt << '\n';
+
+	int* myAddress = &myInt;
+	std::cout <<"Dirección de memoria a que apunta MyAddress: "<< & myAddress << '\n';
+	std::cout <<"Valor de la variable a la que apunta MyAddress: "<< * myAddress << '\n';
+
+	std::cout << &myAddress << '\n';
+	int** myAddressAddress = &myAddress;
+
+	//myArray[] ~ *
+	//myTable[][]~[]*~**
+	int* myArrayPtr = &myArray[0];
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout <<"Dirección de memoria de myArray["<<i<<"] :"<< myArrayPtr << '\n';
+		std::cout << "Valor del objeto de myArray[" << i << "] :" << *myArrayPtr << '\n';
+
+		++myArrayPtr;
+	}
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
